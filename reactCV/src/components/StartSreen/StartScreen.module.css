@@ -1,0 +1,55 @@
+.logoContainer {
+  /* background-image: url(../../../public/ico.png); */
+  object-fit: scale-down;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  width: 100%;
+}
+
+.layers {
+  perspective: 1000px;
+}
+
+.layers__container {
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.layers__item {
+  position: absolute;
+}
+
+.item1 {
+  background-image: url(../../../public/Layer-1.jpg);
+}
+
+.item2 {
+  background-image: url(../../../public/Layer-2.png);
+}
+
+.item3 {
+}
+
+.content {
+}
+
+.content h1 {
+  font-size: 48px;
+  letter-spacing: 0.4rem;
+}
+
+.content h4 {
+  font-size: 32px;
+  letter-spacing: 0.3rem;
+}
+
+.buttonContainer {
+}
+
+.item4 {
+  background-image: url(../../../public/Layer-4.png);
+}
