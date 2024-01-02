@@ -1,9 +1,18 @@
+:root {
+  --index: calc(1vw + 1vh);
+  --transition: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
+}
 .logoContainer {
   /* background-image: url(../../../public/ico.png); */
+  --logo-size: calc(var(--index) * 5);
+  position: absolute;
   object-fit: scale-down;
-  width: 100px;
-  height: 100px;
+  width: var(--logo-size);
+  height: var(--logo-size);
   background-repeat: no-repeat;
+  left: calc(50% - calc(var(--logo-size) / 2));
+  top: calc(var(--index) * 2);
+  z-index: 1;
 }
 
 .logo {
@@ -11,45 +20,71 @@
 }
 
 .layers {
-  perspective: 1000px;
+  perspective: 1500px;
+  overflow: hidden;
 }
 
 .layers__container {
   height: 100vh;
+  min-height: 500px;
   transform-style: preserve-3d;
+  transform: rotateX(var(--moveY)) rotateY(var(--moveX));
+  transition: var(--transition);
+  will-change: transform;
 }
 
 .layers__item {
   position: absolute;
+  inset: -5vw;
+
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .item1 {
-  background-image: url(../../../public/Layer-1.jpg);
+  background-image: url(../../../public/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateZ(-100px) scale(1.06);
 }
 
 .item2 {
-  background-image: url(../../../public/Layer-2.png);
+  background-image: url(../../../public/layer2.png);
+  background-size: calc(var(--index) * 40);
+  background-repeat: no-repeat;
+  transform: translateZ(100px) scale(0.8);
 }
 
 .item3 {
+  background-image: url(../../../public/layer3.png);
+  background-size: calc(var(--index) * 28);
+  background-repeat: no-repeat;
+  transform: translateZ(110px) scale(0.8);
+}
+
+.item4 {
+  transform: translateZ(240px) scale(0.8);
 }
 
 .content {
+  margin-top: calc(var(--index));
+  font-size: calc(var(--index) * 3.5);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: calc(var(--index) * 0.3);
 }
-
-.content h1 {
-  font-size: 48px;
-  letter-spacing: 0.4rem;
-}
-
 .content h4 {
-  font-size: 32px;
-  letter-spacing: 0.3rem;
+  text-transform: none;
 }
 
 .buttonContainer {
 }
 
-.item4 {
-  background-image: url(../../../public/Layer-4.png);
+.item5 {
+  background-image: url(../../../public/Layer-2.svg);
+  background-size: calc(var(--index) * 45);
+  background-repeat: no-repeat;
+  transform: translateZ(350px);
 }
