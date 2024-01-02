@@ -27,7 +27,24 @@ function StartScreen() {
             <div className={styles.content}>
               <h1>Shvarts Denis</h1>
               <h4>Front-end Developer</h4>
-              <div className={styles.buttonContainer}>buttons</div>
+              <div className={styles.buttonContainer}>
+                <a
+                  href="https://www.linkedin.com/in/denis-shvarts-051081275/"
+                  className={styles.LinkedIn}
+                >
+                  <img
+                    src="../../../public/linkedin-96.svg"
+                    alt="link to LinkedIn"
+                  />
+                </a>
+                <button className={styles.startButton}>move to CV</button>
+                <a
+                  href="mailto:ShvartsDenisA@gmail.com"
+                  className={styles.gmail}
+                >
+                  <img src="../../../public/gmail-96.svg" alt="link to Gmail" />
+                </a>
+              </div>
             </div>
           </div>
           <div className={`${styles.layers__item} ${styles.item5}`}></div>

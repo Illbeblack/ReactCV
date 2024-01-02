@@ -44,7 +44,7 @@
 }
 
 .item1 {
-  background-image: url(../../../public/bg.jpg);
+  background-image: url(../../../public/layer1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   transform: translateZ(-100px) scale(1.06);
@@ -75,16 +75,43 @@
   text-transform: uppercase;
   letter-spacing: calc(var(--index) * 0.3);
 }
+
 .content h4 {
   text-transform: none;
 }
 
 .buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.LinkedIn {
+  display: contents;
+}
+
+.startButton {
+  text-transform: uppercase;
+  font-size: calc(var(--index) * 1.2);
+  padding: calc(var(--index) * 0.4) calc(var(--index) * 3);
+  background-color: transparent;
+  color: #fff;
+  border-radius: 10em;
+  border: rgb(255 255 255 / 0.4) 5px solid;
+  cursor: pointer;
+}
+
+.gmail {
+  display: contents;
 }
 
 .item5 {
-  background-image: url(../../../public/Layer-2.svg);
+  background-image: url(../../../public/layer5.svg);
   background-size: calc(var(--index) * 45);
   background-repeat: no-repeat;
   transform: translateZ(350px);
+}
+
+.item5 {
+  pointer-events: none;
 }
